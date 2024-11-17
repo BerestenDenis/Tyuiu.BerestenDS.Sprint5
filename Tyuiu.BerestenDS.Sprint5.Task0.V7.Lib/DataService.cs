@@ -5,7 +5,7 @@ namespace Tyuiu.BerestenDS.Sprint5.Task0.V7.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
             double fx = Math.Pow(-x,3)+ 4 * Math.Pow(x,2) - 3/2 * x;
             fx = Math.Round(fx, 3);
             File.WriteAllText(path,Convert.ToString(fx));

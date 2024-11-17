@@ -8,11 +8,14 @@ namespace Tyuiu.BerestenDS.Sprint5.Task0.V7.Test
         public void TestMethod1()
         {
 
-            string path = @"C:\Users\Пользователь\source\repos\Tyuiu.BerestenDS.Sprint5\Tyuiu.BerestenDS.Sprint5.Task0.V7\bin\Debug\OutPutFileTask0.txt";
-            FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
+            DataService ds = new DataService();
+            //C:\Users\Пользователь\AppData\Local\Temp\OutPutFileTask0.txt
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
+            FileInfo fl = new FileInfo(path);
+            bool fle = fl.Exists;
             bool wait = true;
-            Assert.AreEqual(wait, fileExists);
+            Assert.AreEqual(wait, fle);
+            ;
         }
     }
 }
