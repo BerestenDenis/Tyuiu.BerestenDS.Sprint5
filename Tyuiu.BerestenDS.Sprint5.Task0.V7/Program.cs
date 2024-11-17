@@ -14,15 +14,11 @@ class program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ                                                               *");
         Console.WriteLine("***************************************************************************");
+        string res = ds.SaveToFileTextData(x);
 
-        string path = ds.SaveToFileTextData(x);
-        Console.WriteLine($"Файл: {path}");
+        Console.WriteLine("Файл: " + res);
         Console.WriteLine("Создан!");
-        Console.WriteLine();
 
-        string y = File.ReadAllText(path);
-
-        Console.WriteLine($"f(x) = {Convert.ToDouble(y)}");
-        Console.ReadKey();
+        Console.ReadLine();
     }
 }
