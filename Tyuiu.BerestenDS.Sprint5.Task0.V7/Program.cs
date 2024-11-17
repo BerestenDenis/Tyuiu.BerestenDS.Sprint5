@@ -4,5 +4,25 @@ class program
     static void Main (string[] args)
     {
         DataService ds = new DataService();
+        int x = 4;
+        Console.WriteLine("***************************************************************************");
+        Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+        Console.WriteLine("***************************************************************************");
+
+        Console.WriteLine($"x = {x}");
+
+        Console.WriteLine("***************************************************************************");
+        Console.WriteLine("* РЕЗУЛЬТАТ                                                               *");
+        Console.WriteLine("***************************************************************************");
+
+        string path = ds.SaveToFileTextData(x);
+        Console.WriteLine($"Файл: {path}");
+        Console.WriteLine("Создан!");
+        Console.WriteLine();
+
+        string y = File.ReadAllText(path);
+
+        Console.WriteLine($"f(x) = {Convert.ToDouble(y)}");
+        Console.ReadKey();
     }
 }
