@@ -26,7 +26,7 @@ namespace Tyuiu.BerestenDS.Sprint5.Task1.V27.Lib
                 {
                     File.AppendAllText(path, strY);
                 }
-            } 
+            }
             return path;
         }
     }
