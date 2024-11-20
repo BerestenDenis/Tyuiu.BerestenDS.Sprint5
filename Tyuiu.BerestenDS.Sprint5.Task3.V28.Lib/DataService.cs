@@ -10,7 +10,7 @@ namespace Tyuiu.BerestenDS.Sprint5.Task3.V28.Lib
 
             double res = 0;
 
-            res = Math.Round(-(1/4)*(Math.Pow(x,3)-3*Math.Pow(x,2)+4), 3);
+            res = Math.Round((-1/4)*(Math.Pow(x,3)-3*Math.Pow(x,2)+4), 3);
 
             using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
             {
