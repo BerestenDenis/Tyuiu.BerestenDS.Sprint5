@@ -20,5 +20,4 @@ namespace Tyuiu.BerestenDS.Sprint5.Task3.V28.Lib
             return path;
         }
     }
-    }
 }
