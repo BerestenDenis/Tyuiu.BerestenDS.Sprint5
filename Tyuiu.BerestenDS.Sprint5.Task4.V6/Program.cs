@@ -8,7 +8,6 @@ class Program
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
         string path = @"C:\DataSprint5\InPutDataFileTask4V6.txt";
-        double.Parse("52.8725945", System.Globalization.CultureInfo.InvariantCulture);
         Console.WriteLine("Данные находятся в файле : "+path);
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
