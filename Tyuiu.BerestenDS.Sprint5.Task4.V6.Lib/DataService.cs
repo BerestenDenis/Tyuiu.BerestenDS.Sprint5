@@ -7,6 +7,7 @@ namespace Tyuiu.BerestenDS.Sprint5.Task4.V6.Lib
         {
             string strX = File.ReadAllText(path);
             double res = Math.Round(1 / Math.Cos(Convert.ToDouble(strX)) + 2.2 * Math.Pow(Convert.ToDouble(strX), 2), 3);
+            double.Parse("52.8725945", System.Globalization.CultureInfo.InvariantCulture);
             return res;
         }
     }
