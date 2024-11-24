@@ -8,7 +8,6 @@ namespace Tyuiu.BerestenDS.Sprint5.Task5.V21.Lib
             double res = 1;
             using (StreamReader reader = new StreamReader(path))
             {
-    
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
