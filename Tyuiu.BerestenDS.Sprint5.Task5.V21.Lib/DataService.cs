@@ -12,12 +12,9 @@ namespace Tyuiu.BerestenDS.Sprint5.Task5.V21.Lib
                 while ((line = reader.ReadLine()) != null)
                 {
                     line = line.Replace('.', ',');
-                    if (Convert.ToDouble(line) % 2 == 0 && Convert.ToDouble(line) > 0 );
+                    if (Convert.ToDouble(line) % 2 == 0 || Convert.ToDouble(line) > 0);
                     {
-                        for (int i = 1; i <= Convert.ToDouble(line); i++)
-                        {
-                            res = res * i;
-                        }
+                        res = 1;
 
                     }
                 }
