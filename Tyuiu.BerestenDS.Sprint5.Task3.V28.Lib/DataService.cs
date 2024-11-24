@@ -6,9 +6,7 @@ namespace Tyuiu.BerestenDS.Sprint5.Task3.V28.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask3.bin" });
-
-            double resuslt = 0;
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.bin");
 
             double result = Math.Round((Math.Pow(x, 3) - 3 * Math.Pow(x, 2) + 4) / (-4), 3);
 
@@ -16,7 +14,6 @@ namespace Tyuiu.BerestenDS.Sprint5.Task3.V28.Lib
             {
                 writer.Write(BitConverter.GetBytes(result));
             }
-
             return path;
         }
     }
