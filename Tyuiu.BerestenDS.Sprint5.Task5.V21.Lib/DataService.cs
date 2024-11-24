@@ -19,7 +19,7 @@ namespace Tyuiu.BerestenDS.Sprint5.Task5.V21.Lib
                     }
                 }
             }
-            return res;
+            return Math.Round(res, 3);
         }
     }
 }
