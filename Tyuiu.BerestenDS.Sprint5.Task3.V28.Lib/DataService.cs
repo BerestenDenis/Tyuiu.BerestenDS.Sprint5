@@ -8,13 +8,13 @@ namespace Tyuiu.BerestenDS.Sprint5.Task3.V28.Lib
         {
             string path = Path.Combine(new string[] { Path.GetTempPath(), "OutPutFileTask3.bin" });
 
-            double res = 0;
+            double resuslt = 0;
 
-            res = Math.Round((-1/4)*(Math.Pow(x,3)-3*Math.Pow(x,2)+4), 3);
+            double result = Math.Round((Math.Pow(x, 3) - 3 * Math.Pow(x, 2) + 4) / (-4), 3);
 
             using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
             {
-                writer.Write(BitConverter.GetBytes(res));
+                writer.Write(BitConverter.GetBytes(result));
             }
 
             return path;
