@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Tyuiu.BerestenDS.Sprint5.Task5.V21.Lib;
+class Program
+{
+    static void Main(string[] args)
+    {
+
+    }
+}
