@@ -5,10 +5,11 @@ namespace Tyuiu.BerestenDS.Sprint5.Task5.V21.Lib
     {
         public double LoadFromDataFile(string path)
         {
+            path.Replace(".", ",");
             double res = 1;
             using (StreamReader reader = new StreamReader(path))
             {
-                path.Replace(".", ",");
+    
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
