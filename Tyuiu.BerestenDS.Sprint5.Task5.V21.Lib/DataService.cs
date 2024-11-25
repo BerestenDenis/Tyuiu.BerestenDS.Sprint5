@@ -6,13 +6,14 @@ namespace Tyuiu.BerestenDS.Sprint5.Task5.V21.Lib
         public double LoadFromDataFile(string path)
         {
             double res = 1;
-            using (StreamReader reader = new StreamReader(path))
+            string str = path.Replace(".", ",");
+            using (StreamReader reader = new StreamReader(str))
             {
                 string line;
                 double x;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    x = Convert.ToDouble(line);
+                    x = Convert.ToDouble(str);
                     if (Math.Abs(x) >= 10 && Math.Abs(x) <= 99)
                     {
                         res *= x;
