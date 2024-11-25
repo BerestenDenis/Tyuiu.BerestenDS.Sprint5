@@ -7,7 +7,7 @@ class Program
         string path = @"C:\DataSprint5\InPutDataFileTask5V21.txt";
         using (StreamReader reader = new StreamReader(path))
         {
-            string line;
+            string? line;
             while ((line = reader.ReadLine()) != null)
             {
                 Console.WriteLine(line);

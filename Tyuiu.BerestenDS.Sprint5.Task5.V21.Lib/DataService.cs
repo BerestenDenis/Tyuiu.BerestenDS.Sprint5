@@ -1,11 +1,13 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.ComponentModel.Design;
+using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.BerestenDS.Sprint5.Task5.V21.Lib
 {
     public class DataService : ISprint5Task5V21
     {
         public double LoadFromDataFile(string path)
         {
-            double res = 0;
+            int i = 1;
+            double res = 1;
             using (StreamReader reader = new StreamReader(path))
             {
                 string? line;
@@ -18,10 +20,19 @@ namespace Tyuiu.BerestenDS.Sprint5.Task5.V21.Lib
                     {
                         double lineParse = double.Parse(number);
 
-                        if (lineParse == 6)
+                        if (lineParse % 2 == 0)
                         {
-                            res = 1*2*3*4*5*6;
+                            if (lineParse > 0)
+                            {
+                                while (i <= lineParse)
+                                {
+                                    res = res * i;
+                                    i++;
+                                }
+                            }
+
                         }
+
                     }
                 }
             }
