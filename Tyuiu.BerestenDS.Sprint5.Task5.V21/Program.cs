@@ -4,7 +4,7 @@ class Program
     static void Main(string[] args)
     {
         DataService ds = new DataService();
-        string path = @"C:\DataSprint5\InPutDataFileTask5V16.txt";
+        string path = @"C:\DataSprint5\InPutDataFileTask5V21.txt";
         using (StreamReader reader = new StreamReader(path))
         {
             string line;
