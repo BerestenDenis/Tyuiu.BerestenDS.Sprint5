@@ -5,24 +5,25 @@ namespace Tyuiu.BerestenDS.Sprint5.Task6.V13.Lib
     {
         public int LoadFromDataFile(string path)
         {
-            int count = 0;
-            using (StreamReader sr = new StreamReader(path))
-            {
-                
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                using (StreamReader rd = new StreamReader(path))
                 {
-                    for(int i = 0; i < line.Length; i++)
+                    string line;
+                    int count = 0;
+                    while ((line = rd.ReadLine()) != null)
                     {
-                        if (line[i] == 'с' && line[i + 1] == 'с');
-
+                        line = line.ToLower();
+                        for (int i = 0; i < line.Length; i++)
                         {
-                            count++;
+                            if (line[i] == 'с' && line[i + 1] == 'с')
+                            {
+                                count++;
+                            }
+
                         }
                     }
+                    return count;
                 }
-            }
-            return count;
+            
         }
     }
 }
