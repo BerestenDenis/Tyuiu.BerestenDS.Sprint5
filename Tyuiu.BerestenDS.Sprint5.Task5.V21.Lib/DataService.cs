@@ -5,22 +5,26 @@ namespace Tyuiu.BerestenDS.Sprint5.Task5.V21.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            double res = 1;
-            string str = path.Replace(".", ",");
-            using (StreamReader reader = new StreamReader(str))
+            double res = 0;
+            using (StreamReader reader = new StreamReader(path))
             {
-                string line;
-                double x;
+                string? line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    x = Convert.ToDouble(str);
-                    if (Math.Abs(x) >= 10 && Math.Abs(x) <= 99)
+                    string lineReplace = line.Replace('.', ',');
+                    string[] lineArray = lineReplace.Split(' ');
+
+                    foreach (string number in lineArray)
                     {
-                        res *= x;
+                        double lineParse = double.Parse(number);
+
+                        if (lineParse % 2 == 0)
+                        {
+                            res += lineParse;
+                        }
                     }
                 }
             }
-
             return Math.Round(res, 3);
         }
     }
