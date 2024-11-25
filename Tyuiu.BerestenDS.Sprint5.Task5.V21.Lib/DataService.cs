@@ -18,9 +18,9 @@ namespace Tyuiu.BerestenDS.Sprint5.Task5.V21.Lib
                     {
                         double lineParse = double.Parse(number);
 
-                        if (lineParse % 2 == 0)
+                        if (lineParse == 6)
                         {
-                            res += lineParse;
+                            res = 1*2*3*4*5*6;
                         }
                     }
                 }
