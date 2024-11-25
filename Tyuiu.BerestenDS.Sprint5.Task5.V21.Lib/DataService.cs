@@ -11,10 +11,10 @@ namespace Tyuiu.BerestenDS.Sprint5.Task5.V21.Lib
                 string? line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    string lineReplace = line.Replace('.', ',');
-                    string[] lineArray = lineReplace.Split(' ');
+                    string lines = line.Replace('.', ',');
+                    string[] linearray = lines.Split(' ');
 
-                    foreach (string number in lineArray)
+                    foreach (string number in linearray)
                     {
                         double lineParse = double.Parse(number);
 
