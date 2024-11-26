@@ -21,16 +21,17 @@ namespace Tyuiu.BerestenDS.Sprint5.Task7.V28.Lib
                 {
                     for (int i = 0; i < line.Length; i++)
                     {
-                        if (line[i] != ' ')
+                        if ((line[i] == 0)&& (line[i+1] == ' '))
                         {
-                            if (line[i+1] != ' ')
-                            {
-                                strline = strline + line[i] ;
-                            }
+                            
                         }
-                    }
+                        else
+                        {
+                            strline += line[i];
+                        }
+
+                    }   
                     File.AppendAllText(pathsavefile, strline + Environment.NewLine);
-                    strline = "";
                 }
             }
             return pathsavefile;
