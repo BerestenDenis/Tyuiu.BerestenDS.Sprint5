@@ -21,11 +21,15 @@ namespace Tyuiu.BerestenDS.Sprint5.Task7.V28.Lib
                 {
                     for (int i = 0; i < line.Length; i++)
                     {
-                        if (line[i] == ' ')
+                        if (line[i] != ' ')
                         {
                             if (line[i+1] != ' ')
                             {
                                 strline = strline + line[i] ;
+                            }
+                            else
+                            {
+                                strline = strline + ' ';
                             }
 
                         }
