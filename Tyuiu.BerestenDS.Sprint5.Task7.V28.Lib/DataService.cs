@@ -27,10 +27,7 @@ namespace Tyuiu.BerestenDS.Sprint5.Task7.V28.Lib
                             {
                                 strline = strline + line[i] ;
                             }
-                            else
-                            {
-                                strline = strline + ' ';
-                            }
+
 
                         }
                     }
