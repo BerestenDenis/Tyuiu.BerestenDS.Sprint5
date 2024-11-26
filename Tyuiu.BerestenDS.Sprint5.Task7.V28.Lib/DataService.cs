@@ -6,13 +6,35 @@ namespace Tyuiu.BerestenDS.Sprint5.Task7.V28.Lib
     {
         public string LoadDataAndSave(string path)
         {
+            string pathsavefile = Path.Combine(Path.GetTempPath(), "OutPutFileTask7.txt");
+            FileInfo fileInfo = new FileInfo(pathsavefile);
+            bool fileExists = fileInfo.Exists;
+            if (fileExists)
+            {
+                File.Delete(pathsavefile);
+            }
+            string strline = "";
             using (StreamReader reader = new StreamReader(path))
             {
                 string? line;
-                while ((line = reader.ReadLine()) != null) ;
-                string lines = Regex.Replace(line, "[ ]+","  ");
-                return lines;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    for (int i = 0; i < line.Length; i++)
+                    {
+                        if (line[i] == ' ')
+                        {
+                            if (line[i+1] == ' ')
+                            {
+                                strline = strline + line[i];
+                            }
+
+                        }
+                    }
+                    File.AppendAllText(pathsavefile, strline + Environment.NewLine);
+                    strline = "";
+                }
             }
+            return pathsavefile;
 
         }
     }
